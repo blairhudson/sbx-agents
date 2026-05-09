@@ -1,3 +1,8 @@
+---
+title: sbx-agents Examples and Recipes
+description: Browse Python examples for Codex, OpenCode, Docker SBX, file management, multi-agent workflows, FastAPI, GitHub Actions, and pre-commit hooks.
+---
+
 # Examples
 
 Runnable examples live in `examples/`. These are product patterns, not toy demos.

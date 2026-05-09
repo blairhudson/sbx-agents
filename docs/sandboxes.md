@@ -1,3 +1,8 @@
+---
+title: Sandbox Backends for Docker SBX and Docker
+description: Run coding agents in Docker SBX, plain Docker, and custom sandbox backends with workspace, auth, network, and file controls.
+---
+
 # Sandboxes
 
 A sandbox backend defines where the agent command runs and how results are collected.

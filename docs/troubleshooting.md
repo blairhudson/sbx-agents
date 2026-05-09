@@ -1,3 +1,8 @@
+---
+title: Troubleshoot sbx-agents, Docker SBX, Codex, and OpenCode
+description: Fix common setup issues for Docker, Docker SBX, Codex auth, network policy, file helpers, and sandbox runs.
+---
+
 # Troubleshooting
 
 This page lists common setup and runtime issues.

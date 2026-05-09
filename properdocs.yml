@@ -1,7 +1,10 @@
 site_name: sbx-agents
-site_description: Python SDK for running coding agents in isolated sandboxes.
+site_url: https://blairhudson.com/sbx-agents/
+site_author: Blair Hudson
+site_description: SDK for running Codex, OpenCode, Claude Code, and custom coding agents in Docker SBX, Docker, and other sandboxes.
 repo_url: https://github.com/blairhudson/sbx-agents
 repo_name: blairhudson/sbx-agents
+edit_uri: edit/main/docs/
 
 nav:
   - Home: index.md
@@ -22,6 +25,7 @@ nav:
 
 theme:
   name: material
+  language: en
   features:
     - navigation.sections
     - navigation.path
@@ -49,6 +53,11 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/blairhudson/sbx-agents
+
 plugins:
   - search
   - gen-files:
@@ -75,6 +84,7 @@ plugins:
             docstring_style: google
 
 markdown_extensions:
+  - meta
   - attr_list
   - admonition
   - def_list

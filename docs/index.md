@@ -1,3 +1,8 @@
+---
+title: sbx-agents | SDK for Codex, OpenCode, Claude Code in Sandboxes
+description: Build with Codex, OpenCode, Claude Code, and custom coding agents in Docker SBX, Docker, and other isolated sandbox backends.
+---
+
 <section class="sbx-hero" markdown="1">
 <span class="sbx-kicker">python sdk for coding agents</span>
 

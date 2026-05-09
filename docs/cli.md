@@ -1,3 +1,8 @@
+---
+title: sbxa CLI for Python-Defined Coding Agent Runners
+description: Define a Runner in Python and launch it from the terminal with sbxa, including pretty output, JSON output, and Docker SBX checks.
+---
+
 # CLI
 
 `sbxa` runs Python-defined `Runner` objects from the terminal.

@@ -1,3 +1,8 @@
+---
+title: Agent Backends for Codex, OpenCode, Shell, and Claude Code
+description: Choose and configure coding-agent backends, including Codex, OpenCode, Shell, and future Claude Code adapters.
+---
+
 # Agents
 
 An agent backend defines what coding agent runs and how agent-specific config is materialised.

@@ -1,3 +1,8 @@
+---
+title: Security Model for Sandboxed Coding Agents
+description: Understand trust boundaries, tenant isolation, secrets, network policy, workspace mounts, and sandbox cleanup.
+---
+
 # Security model
 
 `sbx-agents` gives you orchestration primitives; your sandbox backend determines the isolation boundary.

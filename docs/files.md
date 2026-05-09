@@ -1,3 +1,8 @@
+---
+title: Sandbox File Management for Coding Agents
+description: Put, get, list, delete, and copy files across coding-agent sandboxes with workspace-scoped file helpers.
+---
+
 # File management
 
 Use sandbox file helpers to put specific inputs into a workspace and retrieve selected outputs after a run.

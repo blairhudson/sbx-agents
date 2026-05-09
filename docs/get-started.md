@@ -1,3 +1,8 @@
+---
+title: Get Started with sbx-agents
+description: Install sbx-agents, run Codex or OpenCode in Docker SBX, and inspect coding-agent results from Python.
+---
+
 # Get started with sbx-agents
 
 This page walks through a first session: install dependencies, run Codex or OpenCode in Docker SBX, inspect results, and clean up.

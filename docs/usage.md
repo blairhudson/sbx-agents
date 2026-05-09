@@ -1,3 +1,8 @@
+---
+title: Run Coding Agents with Runner and RunConfig
+description: Use Runner, RunConfig, RunResult, JSON events, streaming output, sessions, and structured outputs for coding-agent runs.
+---
+
 # Running agents
 
 The runner coordinates an agent backend and a sandbox backend for one agent turn.

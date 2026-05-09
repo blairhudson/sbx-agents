@@ -1,3 +1,8 @@
+---
+title: Build FastAPI Services with Sandboxed Coding Agents
+description: Expose coding agents as FastAPI services with jobs, file endpoints, tenant isolation, cleanup, and production controls.
+---
+
 # FastAPI services
 
 Embed `sbx-agents` in services when you need users or systems to launch isolated agent runs through an API.

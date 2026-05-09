@@ -1,3 +1,8 @@
+---
+title: Customize Coding Agents with Skills, MCP, Permissions, and Backend Config
+description: Add instructions, skills, MCP servers, portable permissions, Docker options, and backend-native config to coding agents.
+---
+
 # Customize
 
 Customize agents with portable models first, then use backend-native escape hatches when exact behavior matters.

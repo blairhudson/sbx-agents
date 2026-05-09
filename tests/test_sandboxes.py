@@ -10,6 +10,10 @@ from sbx_agents.sandboxes import DockerSandbox, DockerSbxSandbox
 from sbx_agents.sandboxes import docker_sbx as docker_sbx_module
 
 
+def _mock_sbx_available(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(DockerSbxSandbox, "is_available", classmethod(lambda cls: True))
+
+
 def test_docker_command_mounts_workspace() -> None:
     sandbox = DockerSandbox(
         workspace=Path("."),
@@ -183,6 +187,7 @@ def test_docker_sbx_sets_secret_from_env(monkeypatch: pytest.MonkeyPatch) -> Non
             )
         return CommandResult(stdout="", stderr="", returncode=0, command=command)
 
+    _mock_sbx_available(monkeypatch)
     monkeypatch.setenv("OPENAI_API_KEY", "test-token")
     monkeypatch.setattr(docker_sbx_module, "run_command", fake_run_command)
     sandbox = DockerSbxSandbox(
@@ -218,6 +223,7 @@ def test_docker_sbx_sets_oauth_secret(monkeypatch: pytest.MonkeyPatch) -> None:
             )
         return CommandResult(stdout="", stderr="", returncode=0, command=command)
 
+    _mock_sbx_available(monkeypatch)
     monkeypatch.setattr(docker_sbx_module, "run_command", fake_run_command)
     sandbox = DockerSbxSandbox(
         workspace=Path("."),
@@ -254,6 +260,7 @@ def test_docker_sbx_applies_codex_backend_oauth_auth(
             )
         return CommandResult(stdout="", stderr="", returncode=0, command=command)
 
+    _mock_sbx_available(monkeypatch)
     monkeypatch.setattr(docker_sbx_module, "run_command", fake_run_command)
     sandbox = DockerSbxSandbox(workspace=Path("."))
     session = sandbox.prepare(
@@ -291,7 +298,9 @@ def test_docker_sbx_applies_codex_backend_api_key_auth(
             )
         return CommandResult(stdout="", stderr="", returncode=0, command=command)
 
+    _mock_sbx_available(monkeypatch)
     monkeypatch.setenv("OPENAI_TOKEN", "test-token")
+    _mock_sbx_available(monkeypatch)
     monkeypatch.setattr(docker_sbx_module, "run_command", fake_run_command)
     sandbox = DockerSbxSandbox(workspace=Path("."))
     session = sandbox.prepare(

@@ -1,0 +1,94 @@
+site_name: sbx-agents
+site_description: Python SDK for running coding agents in isolated sandboxes.
+repo_url: https://github.com/blairhudson/sbx-agents
+repo_name: blairhudson/sbx-agents
+
+nav:
+  - Home: index.md
+  - Get started: get-started.md
+  - Agents: agents.md
+  - Sandboxes: sandboxes.md
+  - CLI: cli.md
+  - Usage:
+      - Running agents: usage.md
+      - File management: files.md
+      - Multi-step workflows: workflows.md
+      - FastAPI services: services.md
+  - Security: security.md
+  - Customize: customize.md
+  - Troubleshooting: troubleshooting.md
+  - Examples: examples.md
+  - API Reference: reference/
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - gen-files:
+      scripts:
+        - docs/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - section-index
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["."]
+          options:
+            show_source: false
+            show_bases: false
+            show_root_heading: true
+            show_root_full_path: false
+            show_if_no_docstring: true
+            show_signature_annotations: true
+            separate_signature: true
+            members: true
+            filters: ["!^_"]
+            merge_init_into_class: true
+            docstring_style: google
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - def_list
+  - md_in_html
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+copyright: sbx-agents

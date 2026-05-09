@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eu
+
+# Example Git pre-commit hook for sbx-agents.
+# Install:
+#   cp examples/git-hooks/pre-commit .git/hooks/pre-commit
+#   chmod +x .git/hooks/pre-commit
+#
+# This hook runs a Python-defined Runner through `sbxa`. It only runs when staged
+# Python files exist, and it blocks the commit if the sandboxed check fails.
+
+if ! command -v sbxa >/dev/null 2>&1; then
+  echo "sbxa not found. Install with: uv tool install -e ."
+  exit 1
+fi
+
+if ! git diff --cached --name-only -- '*.py' | grep -q .; then
+  exit 0
+fi
+
+echo "Running sbx-agents pre-commit checks..."
+sbxa run examples/precommit_runner.py

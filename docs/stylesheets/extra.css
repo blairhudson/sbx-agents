@@ -1,0 +1,279 @@
+:root {
+  --sbx-ink: #06110f;
+  --sbx-ink-2: #0b1f1a;
+  --sbx-panel: #0e241f;
+  --sbx-border: rgba(79, 255, 176, 0.24);
+  --sbx-green: #4fffb0;
+  --sbx-cyan: #47d8ff;
+  --sbx-orange: #ffb86b;
+  --sbx-muted: #8da99f;
+  --md-primary-fg-color: #07110f;
+  --md-primary-fg-color--light: #10251f;
+  --md-primary-fg-color--dark: #030807;
+  --md-accent-fg-color: #13d98b;
+  --md-code-bg-color: #07110f;
+  --md-code-fg-color: #d8fff0;
+}
+
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #f5fbf8;
+  --md-default-fg-color: #10231e;
+  --md-default-fg-color--light: #425b53;
+  --md-typeset-a-color: #047857;
+  --md-code-bg-color: #e8f7f0;
+  --md-code-fg-color: #10231e;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #06110f;
+  --md-default-fg-color: #daf7ec;
+  --md-default-fg-color--light: #9fbdb3;
+  --md-typeset-a-color: #6dffc2;
+  --md-footer-bg-color: #030807;
+  --md-footer-bg-color--dark: #020504;
+}
+
+.md-typeset a:not(.md-button):not(.headerlink):not(.sbx-pill) {
+  color: #047857;
+  text-decoration-color: rgba(19, 217, 139, 0.35);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  transition: color 140ms ease, text-decoration-color 140ms ease;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:not(.md-button):not(.headerlink):not(.sbx-pill) {
+  color: #6dffc2;
+}
+
+.md-typeset a:not(.md-button):not(.headerlink):not(.sbx-pill):hover {
+  color: var(--sbx-cyan);
+  text-decoration-color: rgba(71, 216, 255, 0.75);
+}
+
+.md-typeset a:visited:not(.md-button):not(.headerlink):not(.sbx-pill) {
+  color: #047857;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:visited:not(.md-button):not(.headerlink):not(.sbx-pill) {
+  color: #6dffc2;
+}
+
+[data-md-color-scheme="default"] .md-typeset a:not(.md-button):not(.headerlink):not(.sbx-pill):hover {
+  color: #0369a1;
+}
+
+.md-nav__link:is(:focus, :hover),
+.md-nav__link--active {
+  color: var(--md-accent-fg-color);
+}
+
+.md-tabs__link:is(:focus, :hover),
+.md-tabs__link--active {
+  color: var(--sbx-green);
+}
+
+body {
+  background-color: var(--md-default-bg-color);
+  background-image:
+    radial-gradient(circle at top left, rgba(79, 255, 176, 0.14), transparent 34rem),
+    radial-gradient(circle at 80% 10%, rgba(71, 216, 255, 0.12), transparent 26rem);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+@media screen and (max-width: 76.2344em) {
+  body {
+    background-attachment: scroll;
+    background-size: 100% 44rem;
+  }
+}
+
+.md-header {
+  border-bottom: 1px solid rgba(79, 255, 176, 0.22);
+  box-shadow: none;
+}
+
+.md-tabs,
+.md-footer {
+  border-top: 1px solid rgba(79, 255, 176, 0.16);
+}
+
+.md-sidebar__scrollwrap {
+  box-shadow: none;
+}
+
+.md-sidebar .md-nav__title,
+.md-sidebar .md-nav__title[for="__drawer"] {
+  background: transparent;
+  box-shadow: none;
+}
+
+.md-sidebar .md-nav__title::before,
+.md-sidebar .md-nav__title::after {
+  display: none;
+}
+
+.md-sidebar .md-nav__link--active {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.md-typeset h1 {
+  max-width: 13ch;
+  font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+  line-height: 1;
+}
+
+.md-typeset h2 {
+  border-top: 1px solid rgba(79, 255, 176, 0.16);
+  padding-top: 1.5rem;
+}
+
+.md-typeset code,
+.md-typeset pre {
+  border-radius: 0.7rem;
+}
+
+.md-typeset pre > code {
+  border: 1px solid rgba(79, 255, 176, 0.18);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18);
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid rgba(79, 255, 176, 0.18);
+  border-radius: 0.8rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background: rgba(79, 255, 176, 0.12);
+  color: var(--md-default-fg-color);
+}
+
+.sbx-hero {
+  position: relative;
+  margin: -1.2rem 0 2rem;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  overflow: hidden;
+  border: 1px solid var(--sbx-border);
+  border-radius: 1.25rem;
+  background:
+    linear-gradient(135deg, rgba(79, 255, 176, 0.16), rgba(71, 216, 255, 0.08)),
+    linear-gradient(180deg, rgba(6, 17, 15, 0.96), rgba(14, 36, 31, 0.92));
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.25);
+  color: #eafff6;
+}
+
+.sbx-hero::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background-image:
+    linear-gradient(rgba(79, 255, 176, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 255, 176, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(115deg, black, transparent 68%);
+}
+
+.sbx-hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 14ch;
+  margin-bottom: 1rem;
+  color: #f0fff9;
+  font-size: clamp(2.15rem, 5vw, 3.6rem);
+}
+
+.sbx-hero p {
+  position: relative;
+  z-index: 1;
+  max-width: 44rem;
+  color: #b9ddcf;
+  font-size: 1.05rem;
+}
+
+.sbx-kicker {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--sbx-green);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sbx-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.sbx-card {
+  padding: 1rem;
+  border: 1px solid rgba(79, 255, 176, 0.18);
+  border-radius: 1rem;
+  background: rgba(79, 255, 176, 0.06);
+}
+
+.sbx-card strong {
+  color: var(--md-default-fg-color);
+}
+
+.sbx-card p {
+  margin-bottom: 0;
+}
+
+.sbx-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.md-typeset a.sbx-pill,
+.md-typeset a.sbx-pill:visited {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid rgba(79, 255, 176, 0.3);
+  border-radius: 999px;
+  background: rgba(79, 255, 176, 0.1);
+  color: #eafff6;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.md-typeset a.sbx-pill:hover {
+  border-color: rgba(79, 255, 176, 0.72);
+  background: rgba(79, 255, 176, 0.18);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0.85rem;
+  box-shadow: none;
+}
+
+.md-typeset details.example {
+  border-color: rgba(71, 216, 255, 0.36);
+}
+
+.md-typeset details.example > summary {
+  background: rgba(71, 216, 255, 0.12);
+}

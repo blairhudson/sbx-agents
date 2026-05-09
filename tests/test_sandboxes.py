@@ -329,6 +329,7 @@ def test_docker_sbx_refreshes_oauth_secret(monkeypatch: pytest.MonkeyPatch) -> N
         calls.append(command)
         return CommandResult(stdout="", stderr="", returncode=0, command=command)
 
+    _mock_sbx_available(monkeypatch)
     monkeypatch.setattr(docker_sbx_module, "run_command", fake_run_command)
     sandbox = DockerSbxSandbox(
         workspace=Path("."),
